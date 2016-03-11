@@ -93,30 +93,21 @@ public class Interface
 		boolean addGeo   = true;
 		boolean addCLASS = true;
 
-        //User sets event UID
+	//set event UID(Unique Identifier): get domain name or a domain literal IP address of the host on which      the identifier was created on the right-hand side of an "@", and      on the left-hand side, put a combination of the current calendar      date and time of day 
+
+        
 		do
 		{
-			System.out.println("\nEnter a valid UID (or type \"cancel\" to cancel adding an event):\n");
-			temp = userInputScanner.nextLine();
-       		temp = temp.toLowerCase();
-            if (temp.equals("cancel"))
-            {
-                return null;
-            }
+			//temp = getDomainName+ “@“+ getDTSTAMP;
+
 		}
         while(!vevent.validUID(temp));
 		vevent.setUID(temp);
 
-        //User sets event DTSTAMP
+        //set event DTSTAMP(Date-Time Stamp):In the case of an iCalendar object that doesn't specify a "METHOD"  property, this property is equivalent to the "LAST-MODIFIED"      property.
 		do
 		{
-			System.out.println("\nEnter a valid DTSTAMP (or type \"cancel\" to cancel adding an event):\n");
-			temp = userInputScanner.nextLine();
-       		temp = temp.toLowerCase();
-            if (temp.equals("cancel"))
-            {
-                return null;
-            }
+			//temp    = getUTCtimeFormat;
 		}
 		while(!vevent.validDTSTAMP(temp));
 		vevent.setDTSTAMP(temp);

@@ -11,6 +11,9 @@ public class Vevent
 		DTSTART:19970714T170000Z
 		DTEND:19970715T035959Z
 		SUMMARY:Bastille Day Party
+		GEO:0.00,0.00
+		CLASS:PUBLIC
+
 	*/
 
 	private String UID;
